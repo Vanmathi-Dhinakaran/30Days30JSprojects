@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14</title>
+</head>
+<body>
+
+    <p style="text-align: center; padding-top: 20%; font-size: xx-large;">Have you guessed the difference between Referring an array and copying an array. <br>Give a try to update an array without making the changes in the original copy. <br>Give it a try @ console!!</p>
+    
+
+    <script>
+        // Let's say we have an array
+        const friends = ["Vanmathi", "Yamini", "Aruna", "Midhula", "Iswarya","Narmadha"];
+
+        // suppose we need a copy means, we generally use 
+        const close = friends;
+        console.log(close);
+
+        //but if we do some update on array close like
+        //close[2] = "panda";
+
+        // it changes the original array
+        // the solution is to make a copy instead of changing the original array
+
+        // here is the  two way to create a copy
+        const WE = friends.slice();
+        console.log(WE);
+
+        const friend = ["Panda"].concat(friends);
+        console.log(friend);
+        // using this the original will not get changed
+
+
+    </script>
+    
+</body>
+</html>
