@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 21</title>
+    <style>
+        html {
+  box-sizing: border-box;
+  background: #eeeeee;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.site-wrap {
+  max-width: 700px;
+  margin: 70px auto;
+  background: white;
+  padding: 40px;
+  text-align: justify;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.05);
+  transform: scale(0.98);
+  transition: transform 0.5s;
+}
+
+body.fixed-nav .site-wrap {
+  transform: scale(1);
+}
+
+header {
+  text-align: center;
+  height: 50vh;
+  background: url(road.jpeg) bottom center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  font-size: 7vw;
+  text-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+}
+
+nav {
+  background: black;
+  top: 0;
+  width: 100%;
+  transition:all 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+body.fixed-nav nav {
+  position: fixed;
+  box-shadow: 0 5px 0 rgba(0,0,0,0.1);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li.logo {
+  max-width: 0;
+  overflow: hidden;
+  background: white;
+  transition: all 0.5s;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+li.logo a {
+  color: black;
+}
+
+.fixed-nav li.logo {
+  max-width: 500px;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+  color: white;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>The road not taken.</h1>
+      </header>
+    
+      <nav id="main">
+        <ul>
+          <li class="logo"><a href="#">LOST.</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Poet</a></li>
+          <li><a href="#">Poem</a></li>
+          <li><a href="#">Gist</a></li>
+        </ul>
+      </nav>
+    
+      <div class="site-wrap">
+        <p>This article deals with the Road Not Taken summary written by Robert Frost and published in the year 1916. The Road Not Taken Summary is a poem that describes the dilemma of a person standing at a road with diversion. This diversion symbolizes real-life situations. Sometimes, in life too there come times when we have to take tough decisions. We could not decide what is right or wrong for us.</p>
+       <p>The poet looked at one path for a long time to decide whether it’s good or not for him. Then he takes the alternative path as he feels that both paths are equally good. He feels that the path he chose was better for him. The path was grassy which depicted that it was walked over by fewer people and also, it was ‘wanted wear”.</p>
+       <p>Driven by our hopes and ambitions, we take a decision taken by fewer people. We think that if fail to seek accomplishments we could get a chance to change and start again. However, we travel too far and have to regret at the end. Also, it is possible that we could become an extraordinary person because of that one decision. Thus, the road not taken summary focuses on making wise decisions in life.</p>
+       <p>It depicted that the path was unused. However, as he walks on the path for some distance, he realizes that both the paths were similarly worn out. Even in our life, every decision has its own good and bad consequences. We might think we are in a better position than the others but it is not the reality.</p> 
+       <img src="image2.jpg" class="align-right slide-in">
+       <p>The poet says that the two paths looked similar that morning. Both were having leaves on them.  No one stepped on that and thus they were green. He decided to move forward on one path and keep the other for another day. Although he knew that he would not be able to return back as one path would lead to another. This happens in life too. We make a decision and move forward in that direction. We think that we would get a chance to start over again if we fail. But that does not happen.</p> 
+       <img src="tt.jpg" class="align-right slide-in">
+       <p>The poet says that sometime in the future, he will take a deep breath and tell that once in a lifetime he had to take a tough decision. He was standing at a diversion of two roads. Both looked to him equally well. Thus, he decides to move forward on the road which fewer people took. As a result, it has made him what he is today. That one decision shaped his future.</p>   
+    </div>
+    
+      <script>
+        
+        const nav = document.querySelector('#main');
+        let topOfNav = nav.offsetTop;
+    
+        function fixNav() {
+          if (window.scrollY >= topOfNav) {
+            document.body.style.paddingTop = nav.offsetHeight + 'px';
+            document.body.classList.add('fixed-nav');
+          } else {
+            document.body.classList.remove('fixed-nav');
+            document.body.style.paddingTop = 0;
+          }
+        }
+    
+        window.addEventListener('scroll', fixNav);
+    
+      </script>
+    
+    
+</body>
+</html>
